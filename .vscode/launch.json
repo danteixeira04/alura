@@ -1,0 +1,80 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "name": "Web: Vite (Chrome)",
+      "type": "chrome",
+      "request": "launch",
+      "url": "http://localhost:5173",
+      "webRoot": "${workspaceFolder}/apps/web/src",
+      "sourceMaps": true,
+      "sourceMapPathOverrides": {
+        "/_/*": "${webRoot}/*"
+      },
+      "preLaunchTask": "pnpm: dev:web",
+      "postDebugTask": "",
+      "presentation": {
+        "hidden": false,
+        "group": "1-web",
+        "order": 1
+      }
+    },
+    {
+      "name": "Web: Vite (Edge)",
+      "type": "msedge",
+      "request": "launch",
+      "url": "http://localhost:5173",
+      "webRoot": "${workspaceFolder}/apps/web/src",
+      "sourceMaps": true,
+      "preLaunchTask": "pnpm: dev:web",
+      "presentation": { "group": "1-web", "order": 2 }
+    },
+    {
+      "name": "API: NestJS (ts-node, attach)",
+      "type": "node",
+      "request": "attach",
+      "port": 9229,
+      "address": "localhost",
+      "localRoot": "${workspaceFolder}/apps/api",
+      "remoteRoot": "${workspaceFolder}/apps/api",
+      "outFiles": [
+        "${workspaceFolder}/apps/api/dist/**/*.js",
+        "${workspaceFolder}/apps/api/src/**/*.ts"
+      ],
+      "sourceMaps": true,
+      "smartStep": true,
+      "skipFiles": ["<node_internals>/**"],
+      "preLaunchTask": "API: NestJS (iniciar com --inspect)",
+      "presentation": { "group": "2-api", "order": 1 }
+    },
+    {
+      "name": "API: NestJS (programatico)",
+      "type": "node",
+      "request": "launch",
+      "runtimeExecutable": "pnpm",
+      "runtimeArgs": ["--filter", "@code-connect/api", "run", "start:debug"],
+      "cwd": "${workspaceFolder}",
+      "args": [],
+      "console": "integratedTerminal",
+      "internalConsoleOptions": "neverOpen",
+      "localRoot": "${workspaceFolder}/apps/api",
+      "outFiles": [
+        "${workspaceFolder}/apps/api/dist/**/*.js",
+        "${workspaceFolder}/apps/api/src/**/*.ts"
+      ],
+      "sourceMaps": true,
+      "smartStep": true,
+      "skipFiles": ["<node_internals>/**"],
+      "presentation": { "group": "2-api", "order": 2 }
+    }
+  ],
+  "compounds": [
+    {
+      "name": "Full Stack: Web + API",
+      "configurations": ["API: NestJS (programatico)", "Web: Vite (Chrome)"],
+      "preLaunchTask": "pnpm: dev (web + api em paralelo)",
+      "stopAll": true,
+      "presentation": { "group": "full", "order": 0 }
+    }
+  ]
+}

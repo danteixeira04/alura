@@ -1,0 +1,66 @@
+{
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "label": "pnpm: dev (web + api em paralelo)",
+      "type": "shell",
+      "command": "pnpm",
+      "args": ["dev"],
+      "options": {
+        "cwd": "${workspaceFolder}"
+      },
+      "problemMatcher": [],
+      "presentation": {
+        "reveal": "always",
+        "panel": "dedicated",
+        "group": "dev"
+      },
+      "isBackground": true
+    },
+    {
+      "label": "pnpm: dev:web (somente Vite)",
+      "type": "shell",
+      "command": "pnpm",
+      "args": ["dev:web"],
+      "options": { "cwd": "${workspaceFolder}" },
+      "problemMatcher": [],
+      "presentation": {
+        "reveal": "always",
+        "panel": "dedicated",
+        "group": "dev"
+      },
+      "isBackground": true
+    },
+    {
+      "label": "pnpm: dev:api (somente NestJS com watch)",
+      "type": "shell",
+      "command": "pnpm",
+      "args": ["dev:api"],
+      "options": { "cwd": "${workspaceFolder}" },
+      "problemMatcher": ["$tsc-watch"],
+      "presentation": {
+        "reveal": "always",
+        "panel": "dedicated",
+        "group": "dev"
+      },
+      "isBackground": true
+    },
+    {
+      "label": "pnpm: build (todos)",
+      "type": "shell",
+      "command": "pnpm",
+      "args": ["build"],
+      "options": { "cwd": "${workspaceFolder}" },
+      "problemMatcher": ["$tsc", "$esbuild"],
+      "group": { "kind": "build", "isDefault": true }
+    },
+    {
+      "label": "pnpm: install",
+      "type": "shell",
+      "command": "pnpm",
+      "args": ["install"],
+      "options": { "cwd": "${workspaceFolder}" },
+      "problemMatcher": []
+    }
+  ]
+}

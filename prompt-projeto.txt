@@ -1,0 +1,15 @@
+# Cria um workspace usando pnpm workspaces
+# Dentro dele, teremos dois apps:
+# Um app React usando Vite (use o npx pra gerar esse projeto do zero)
+# Um app NestJS (use também npx para gerar esse projeto)
+# Na raiz, crie atalhos no package.json para podermos executar comandos em cada app sem precisar trocar para diretórios internos
+
+# Linguagem do app React: React-TypeScript
+# Package manager: pnpm
+# Execução em paralelo: usar pnpm -r --parallel
+
+
+Vamos incrementar o @Claude.md :
+No frontend, queremos usar o atomic design, tailwind, e todo componente precisa ter um teste cobrindo o seu uso essencial.
+No backend, queremos seguir todas as regras para sermos aderentes aos princípios REST
+Em relação ao git, para ambos os projetos, queremos utilizar conventional commits.

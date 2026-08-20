@@ -1,0 +1,37 @@
+{
+  "name": "code-connect",
+  "private": true,
+  "version": "0.0.0",
+  "packageManager": "pnpm@11.20.0",
+  "scripts": {
+    "dev": "pnpm -r --parallel run dev",
+    "dev:web": "pnpm --filter @code-connect/web run dev",
+    "dev:api": "pnpm --filter @code-connect/api run start:dev",
+    "build": "pnpm -r run build",
+    "build:web": "pnpm --filter @code-connect/web run build",
+    "build:api": "pnpm --filter @code-connect/api run build",
+    "start:api": "pnpm --filter @code-connect/api run start:prod",
+    "lint": "pnpm -r run lint",
+    "lint:web": "pnpm --filter @code-connect/web run lint",
+    "lint:api": "pnpm --filter @code-connect/api run lint",
+    "test": "pnpm -r --parallel run test",
+    "test:web": "pnpm --filter @code-connect/web run test",
+    "test:api": "pnpm --filter @code-connect/api run test",
+    "test:e2e": "pnpm --filter @code-connect/api run test:e2e",
+    "prepare": "husky",
+    "lint-staged": "lint-staged"
+  },
+  "lint-staged": {
+    "apps/web/src/**/*.{ts,tsx}": "pnpm --filter @code-connect/web exec oxlint",
+    "apps/api/src/**/*.ts": "pnpm --filter @code-connect/api exec eslint --fix",
+    "apps/api/test/**/*.ts": "pnpm --filter @code-connect/api exec eslint --fix",
+    "*.{md,json}": "prettier --write"
+  },
+  "devDependencies": {
+    "@commitlint/cli": "^19.8.1",
+    "@commitlint/config-conventional": "^19.8.1",
+    "husky": "^9.1.7",
+    "lint-staged": "^15.5.2",
+    "prettier": "^3.9.6"
+  }
+}
