@@ -1,5 +1,5 @@
 import type { ReactNode } from 'react';
-import { Button } from '../atoms/Button';
+import { Button } from '../../atoms/Button';
 
 type CardProps = {
   title: string;
