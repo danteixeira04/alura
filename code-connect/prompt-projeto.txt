@@ -1,0 +1,30 @@
+# Cria um workspace usando pnpm workspaces
+# Dentro dele, teremos dois apps:
+# Um app React usando Vite (use o npx pra gerar esse projeto do zero)
+# Um app NestJS (use também npx para gerar esse projeto)
+# Na raiz, crie atalhos no package.json para podermos executar comandos em cada app sem precisar trocar para diretórios internos
+
+# Linguagem do app React: React-TypeScript
+# Package manager: pnpm
+# Execução em paralelo: usar pnpm -r --parallel
+
+- Essa parte já esta feita.
+#Vamos incrementar o @Claude.md e o projeto no local (C:\Users\Alline_Daniel\Documents\Daniel\Desenvolvimento\alura\code-connect) :
+No frontend, queremos usar o atomic design, tailwind, e todo componente precisa ter um teste cobrindo o seu uso essencial.
+No backend, queremos seguir todas as regras para sermos aderentes aos princípios REST
+Em relação ao git, para ambos os projetos, queremos utilizar conventional commits.
+
+- Essa parte iremos fazer
+Arquivo: C:\Users\Alline_Daniel\Documents\Daniel\Desenvolvimento\CursoIA-Alura\Figma_CodeConnect\Login.png
+Vamos desenvolver a tela de login com base em @Login.png
+
+Pontos Importantes:
+
+Imagens e logos utilizadas no projeto: C:\Users\Alline_Daniel\Documents\Daniel\Desenvolvimento\CursoIA-Alura\Arquivos-ImagensCurso\Ícones\PNG todas elas podem ser necessárias.
+Banner Principal: 
+
+Detalhes de implementação: 
+- Utilize atomic design para gerar os componentes.
+- A pagina de cadastro vai ter o mesmo layout base, porém, o banner é diferente e o formulário tem campos diferentes, não precisa implementar agora mas já desenvolva pensando em reuso proximo.
+- A imagem com o o layout esta em com os links aqui.
+
