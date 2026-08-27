@@ -1,0 +1,12 @@
+packages:
+  - "apps/*"
+
+allowBuilds:
+  better-sqlite3: true
+  sqlite3: true
+  unrs-resolver: true
+
+onlyBuiltDependencies:
+  - "unrs-resolver"
+  - "@nestjs/core"
+  - "@tailwindcss/oxide"
