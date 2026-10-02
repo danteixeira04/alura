@@ -1,0 +1,31 @@
+# Local credentials and environment files
+**/.env
+**/.env.*
+!**/.env.example
+
+# Git metadata from the original service repositories
+**/.git/
+
+# Dependencies and generated output
+**/node_modules/
+**/bin/
+**/obj/
+**/target/
+**/dist/
+**/build/
+**/out/
+**/coverage/
+**/.angular/
+**/.nx/cache/
+**/.nx/workspace-data/
+**/.nx/daemon/
+**/__pycache__/
+**/*.py[cod]
+**/*.class
+
+# Local IDE and operating-system files
+**/.idea/
+**/.DS_Store
+**/Thumbs.db
+**/*.user
+**/*.suo

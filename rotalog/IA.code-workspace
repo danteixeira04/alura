@@ -1,0 +1,11 @@
+{
+    "folders": [
+        {
+            "path": ".",
+            "name": "rotalog"
+        }
+    ],
+    "settings": {
+        "java.compile.nullAnalysis.mode": "automatic"
+    }
+}
